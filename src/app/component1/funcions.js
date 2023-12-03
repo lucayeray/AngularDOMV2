@@ -15,3 +15,16 @@ export function countWords() {
   let numeroFinal = document.getElementById('numeroPraules')
   numeroFinal.innerHTML="Numero de paraules: "+ paraules.length
 }
+
+export function mostrarValores() {
+  var lista = document.getElementById("listaDesplegable");
+  var divValores = document.getElementById("valoresSeleccionados");
+
+  divValores.innerHTML = "";
+
+  for (var i = 0; i < lista.options.length; i++) {
+    if (lista.options[i].selected) {
+      divValores.innerHTML += lista.options[i].value + "<br>";
+    }
+  }
+}
